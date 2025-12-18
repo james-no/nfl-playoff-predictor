@@ -1,0 +1,30 @@
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data cache
+*.pkl
+*.csv
+nfl_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+
+# Analysis outputs
+predictions/
+reports/
+*.pdf
