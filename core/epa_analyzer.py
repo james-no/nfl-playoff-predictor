@@ -252,7 +252,7 @@ class EPAAnalyzer:
         if not is_division_game:
             return epa_diff
         
-        compression = EPAConfig.DIVISION_RIVALRY_COMPRESSION
+        compression = BettingConfig.DIVISION_RIVALRY_COMPRESSION
         adjusted = epa_diff * (1 - compression)
         
         logger.debug(f"Division rivalry: EPA {epa_diff:.3f} → {adjusted:.3f} ({compression:.0%} compression)")

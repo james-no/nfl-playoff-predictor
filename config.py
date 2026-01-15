@@ -56,6 +56,14 @@ class EPAConfig:
     RECENT_GAMES_WINDOW = 4  # Last 4 games
     RECENT_FORM_WEIGHT = 0.70  # 70% weight on recent form
     FULL_SEASON_WEIGHT = 0.30  # 30% weight on full season
+
+    # EPA-dominant mode and caps
+    EPA_DOMINANT_MODE = True
+    GLOBAL_NON_EPA_CAP = 0.060  # Max absolute differential added by non-EPA factors (~1.5 pts)
+    CAP_REST_EPA = 0.035
+    CAP_INJURY_PER_TEAM_EPA = 0.030  # Generic per-team injury cap (QB-specific TBD)
+    CAP_FAN_NOISE_EPA = 0.009
+    CAP_WEATHER_EPA = 0.030
     
     # EPA thresholds
     ELITE_OFFENSE_THRESHOLD = 0.15
@@ -131,6 +139,9 @@ class TravelConfig:
     
     # Additional penalty multiplier if away team is on a short week (< 7 rest days)
     SHORT_WEEK_MULTIPLIER = 1.5
+
+    # Hard cap for total travel penalty (e.g., 3 zones with short week → -0.027)
+    MAX_PENALTY_EPA = -0.027
     
     # Early East kickoffs for West teams (optional future)
     EARLY_EAST_KICK_PENALTY = -0.004  # Not applied by default

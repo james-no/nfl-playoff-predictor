@@ -10,7 +10,7 @@ from .data_loader import NFLDataLoader
 from .epa_analyzer import EPAAnalyzer
 from .betting_analyzer import BettingAnalyzer
 from database import PredictionsDB
-from config import BettingConfig, InjuryConfig, TeamsConfig, EPAConfig
+from config import BettingConfig, InjuryConfig, TeamsConfig, EPAConfig, TravelConfig
 from utils.validators import validate_team, are_division_rivals
 from utils.travel import compute_travel_penalty, compute_fan_noise_boost
 from logger import get_logger
@@ -97,6 +97,9 @@ class NFLPredictor:
         home_total_epa = home_combined['combined_total_epa']
         away_total_epa = away_combined['combined_total_epa']
         
+        # Base EPA differential (for EPA-dominant clamp)
+        base_epa_diff = home_total_epa - away_total_epa
+        
         adjustments = {}
         
         # Home field advantage
@@ -113,18 +116,20 @@ class NFLPredictor:
             logger.info(f"Altitude advantage: +{altitude_boost:.3f} EPA")
         
         # Fan noise (home boost)
-        fan_noise = compute_fan_noise_boost(home_team)
+        raw_fan_noise = compute_fan_noise_boost(home_team)
+        fan_noise = min(raw_fan_noise, EPAConfig.CAP_FAN_NOISE_EPA)
         home_total_epa += fan_noise
         adjustments['fan_noise'] = fan_noise
-        logger.info(f"Fan noise boost: +{fan_noise:.3f} EPA")
+        logger.info(f"Fan noise boost: +{fan_noise:.3f} EPA (raw {raw_fan_noise:+.3f})")
         
         # Travel penalty (applies to away team)
         away_rest = rest_days.get('away', None) if rest_days else None
         travel_pen = compute_travel_penalty(home_team, away_team, away_rest)
         if travel_pen != 0:
-            away_total_epa += travel_pen
-            adjustments['travel_penalty'] = travel_pen
-            logger.info(f"Travel penalty (away): {travel_pen:+.3f} EPA")
+            applied_travel = travel_pen if travel_pen >= 0 else max(travel_pen, TravelConfig.MAX_PENALTY_EPA)
+            away_total_epa += applied_travel
+            adjustments['travel_penalty'] = applied_travel
+            logger.info(f"Travel penalty (away): {applied_travel:+.3f} EPA (raw {travel_pen:+.3f})")
         
         # Division rivalry compression
         is_division = are_division_rivals(home_team, away_team)
@@ -135,13 +140,18 @@ class NFLPredictor:
             home_total_epa -= compression / 2
             away_total_epa += compression / 2
             adjustments['division_rivalry'] = -compression
-            logger.info(f"Division rivalry: {EPAConfig.DIVISION_RIVALRY_COMPRESSION:.0%} compression")
+            logger.info(f"Division rivalry: {BettingConfig.DIVISION_RIVALRY_COMPRESSION:.0%} compression")
         
         # Rest differential
         if rest_days:
             rest_diff = rest_days.get('home', 0) - rest_days.get('away', 0)
             if rest_diff != 0:
                 rest_adjustment = rest_diff * 0.005  # 0.5% per day
+                # Cap
+                if rest_adjustment > 0:
+                    rest_adjustment = min(rest_adjustment, EPAConfig.CAP_REST_EPA)
+                else:
+                    rest_adjustment = max(rest_adjustment, -EPAConfig.CAP_REST_EPA)
                 home_total_epa += rest_adjustment
                 adjustments['rest_differential'] = rest_adjustment
                 logger.info(f"Rest differential: {rest_diff} days → {rest_adjustment:+.3f} EPA")
@@ -151,15 +161,18 @@ class NFLPredictor:
         if injuries:
             if home_team in injuries:
                 home_injury_impact = injuries[home_team]
+                # Cap per-team
+                home_injury_impact = max(min(home_injury_impact, EPAConfig.CAP_INJURY_PER_TEAM_EPA), -EPAConfig.CAP_INJURY_PER_TEAM_EPA)
                 home_total_epa += home_injury_impact
                 injury_impact += home_injury_impact
-                logger.info(f"{home_team} injuries: {home_injury_impact:+.3f} EPA")
+                logger.info(f"{home_team} injuries: {home_injury_impact:+.3f} EPA (capped)")
             
             if away_team in injuries:
                 away_injury_impact = injuries[away_team]
+                away_injury_impact = max(min(away_injury_impact, EPAConfig.CAP_INJURY_PER_TEAM_EPA), -EPAConfig.CAP_INJURY_PER_TEAM_EPA)
                 away_total_epa += away_injury_impact
                 injury_impact += away_injury_impact
-                logger.info(f"{away_team} injuries: {away_injury_impact:+.3f} EPA")
+                logger.info(f"{away_team} injuries: {away_injury_impact:+.3f} EPA (capped)")
         
         adjustments['injuries'] = injury_impact
         
@@ -183,13 +196,33 @@ class NFLPredictor:
                 weather_impact -= 0.01
             
             if weather_impact != 0:
+                # Cap overall abs impact
+                if weather_impact > 0:
+                    weather_impact = min(weather_impact, EPAConfig.CAP_WEATHER_EPA)
+                else:
+                    weather_impact = max(weather_impact, -EPAConfig.CAP_WEATHER_EPA)
                 home_total_epa += weather_impact / 2
                 away_total_epa += weather_impact / 2
                 adjustments['weather'] = weather_impact
-                logger.info(f"Weather impact: {weather_impact:+.3f} EPA")
+                logger.info(f"Weather impact: {weather_impact:+.3f} EPA (split)")
         
         # Calculate final EPA differential
-        epa_differential = home_total_epa - away_total_epa
+        raw_epa_differential = home_total_epa - away_total_epa
+
+        # EPA-dominant global cap on non-EPA adjustments
+        if EPAConfig.EPA_DOMINANT_MODE:
+            non_epa_effect = raw_epa_differential - base_epa_diff
+            cap = EPAConfig.GLOBAL_NON_EPA_CAP
+            if abs(non_epa_effect) > cap:
+                clamped_effect = cap if non_epa_effect > 0 else -cap
+                epa_differential = base_epa_diff + clamped_effect
+                adjustments['global_non_epa_cap_applied'] = float(non_epa_effect - clamped_effect)
+                logger.info(f"Global non-EPA cap applied: adjusted by {non_epa_effect - clamped_effect:+.3f} EPA")
+            else:
+                epa_differential = raw_epa_differential
+                adjustments['global_non_epa_cap_applied'] = 0.0
+        else:
+            epa_differential = raw_epa_differential
         
         # Convert EPA to point spread
         # Rule of thumb: 0.10 EPA ≈ 2.5 points
