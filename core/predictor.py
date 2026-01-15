@@ -12,6 +12,7 @@ from .betting_analyzer import BettingAnalyzer
 from database import PredictionsDB
 from config import BettingConfig, InjuryConfig, TeamsConfig, EPAConfig
 from utils.validators import validate_team, are_division_rivals
+from utils.travel import compute_travel_penalty, compute_fan_noise_boost
 from logger import get_logger
 
 logger = get_logger(__name__)
@@ -110,6 +111,20 @@ class NFLPredictor:
             home_total_epa += altitude_boost
             adjustments['altitude'] = altitude_boost
             logger.info(f"Altitude advantage: +{altitude_boost:.3f} EPA")
+        
+        # Fan noise (home boost)
+        fan_noise = compute_fan_noise_boost(home_team)
+        home_total_epa += fan_noise
+        adjustments['fan_noise'] = fan_noise
+        logger.info(f"Fan noise boost: +{fan_noise:.3f} EPA")
+        
+        # Travel penalty (applies to away team)
+        away_rest = rest_days.get('away', None) if rest_days else None
+        travel_pen = compute_travel_penalty(home_team, away_team, away_rest)
+        if travel_pen != 0:
+            away_total_epa += travel_pen
+            adjustments['travel_penalty'] = travel_pen
+            logger.info(f"Travel penalty (away): {travel_pen:+.3f} EPA")
         
         # Division rivalry compression
         is_division = are_division_rivals(home_team, away_team)

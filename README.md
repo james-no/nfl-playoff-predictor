@@ -9,6 +9,7 @@
 - ✅ **Configuration Management**: Centralized settings in `config.py`
 - ✅ **Professional Logging**: Rotating file logs with structured output
 - ✅ **Error Handling**: Graceful fallbacks and caching
+- ✅ **Fan Noise & Travel**: Loud stadium boost and timezone travel penalties
 - ✅ **Complete Documentation**: Docstrings, architecture docs, examples
 - 🔜 **Streamlit UI**: Coming soon (1-hour implementation)
 

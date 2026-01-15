@@ -84,6 +84,11 @@ class BettingConfig:
     COLD_WEATHER_PENALTY = -0.010  # Per 10 degrees below 40F
     WIND_PENALTY_PER_MPH = -0.001  # Per MPH over 15
     
+    # Crowd noise (home defense disrupts away offense, esp. snap counts)
+    FAN_NOISE_BASE_EPA = 0.004  # Applied for all home teams in playoffs
+    FAN_NOISE_LOUD_STADIUM_BONUS_EPA = 0.003  # Extra for known loud venues
+    FAN_NOISE_DOME_BONUS_EPA = 0.002  # Extra if dome team at home
+    
     # Division rivalry
     DIVISION_RIVALRY_COMPRESSION = 0.18  # Games 18% closer than expected
     RIVALRY_EPA_COMPRESSION = 0.18  # Alias
@@ -108,6 +113,27 @@ class BettingConfig:
     
     # Key numbers (most common margins)
     KEY_NUMBERS = [3, 7, 10, 6, 4, 14]
+
+# =============================================================================
+# TRAVEL SETTINGS
+# =============================================================================
+
+class TravelConfig:
+    """Travel and timezone impact configuration"""
+    
+    # Penalty applied to away team EPA based on timezone difference
+    TZ_DIFF_PENALTY = {
+        0: 0.0,
+        1: -0.007,
+        2: -0.012,
+        3: -0.018,
+    }
+    
+    # Additional penalty multiplier if away team is on a short week (< 7 rest days)
+    SHORT_WEEK_MULTIPLIER = 1.5
+    
+    # Early East kickoffs for West teams (optional future)
+    EARLY_EAST_KICK_PENALTY = -0.004  # Not applied by default
 
 # =============================================================================
 # INJURY IMPACT SETTINGS
@@ -266,11 +292,34 @@ class TeamsConfig:
         'NFC_SOUTH': NFC_SOUTH,
         'NFC_WEST': NFC_WEST,
     }
+
+    # Team timezones for travel impact
+    TEAM_TIMEZONES = {
+        # AFC East (ET)
+        'BUF': 'ET', 'MIA': 'ET', 'NE': 'ET', 'NYJ': 'ET',
+        # AFC North (ET)
+        'BAL': 'ET', 'CIN': 'ET', 'CLE': 'ET', 'PIT': 'ET',
+        # AFC South
+        'HOU': 'CT', 'IND': 'ET', 'JAX': 'ET', 'TEN': 'CT',
+        # AFC West
+        'DEN': 'MT', 'KC': 'CT', 'LV': 'PT', 'LAC': 'PT',
+        # NFC East
+        'DAL': 'CT', 'NYG': 'ET', 'PHI': 'ET', 'WAS': 'ET',
+        # NFC North
+        'CHI': 'CT', 'DET': 'ET', 'GB': 'CT', 'MIN': 'CT',
+        # NFC South
+        'ATL': 'ET', 'CAR': 'ET', 'NO': 'CT', 'TB': 'ET',
+        # NFC West
+        'ARI': 'MT', 'LA': 'PT', 'SF': 'PT', 'SEA': 'PT',
+    }
     
     # Teams with special factors
     ALTITUDE_TEAMS = ['DEN']  # Mile High
     COLD_WEATHER_TEAMS = ['BUF', 'GB', 'CHI', 'DEN', 'NE']
     DOME_TEAMS = ['ATL', 'DET', 'NO', 'MIN', 'LV', 'LA', 'ARI']
+    
+    # Known loud stadiums (historically top crowd noise)
+    LOUD_STADIUMS = ['SEA', 'KC', 'NO', 'BUF', 'PHI', 'GB', 'DAL', 'MIN']
 
 # =============================================================================
 # EXPORT ALL CONFIGS
