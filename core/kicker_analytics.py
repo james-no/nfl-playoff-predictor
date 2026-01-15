@@ -28,11 +28,22 @@ def calculate_kicker_stats(pbp: pd.DataFrame, team: str) -> Dict[str, float]:
     if not KickerConfig.ENABLED:
         return {}
     
+    # Check if required columns exist
+    required_cols = ['posteam', 'field_goal_attempt', 'kick_distance', 'field_goal_result']
+    missing_cols = [col for col in required_cols if col not in pbp.columns]
+    if missing_cols:
+        logger.warning(f"Missing kicker columns for {team}: {missing_cols}. Using defaults.")
+        return _default_kicker_stats()
+    
     # Filter to field goal attempts by this team
-    team_fgs = pbp[
-        (pbp['posteam'] == team) & 
-        (pbp['field_goal_attempt'] == 1)
-    ].copy()
+    try:
+        team_fgs = pbp[
+            (pbp['posteam'] == team) & 
+            (pbp['field_goal_attempt'] == 1)
+        ].copy()
+    except Exception as e:
+        logger.warning(f"Error filtering FG data for {team}: {e}")
+        return _default_kicker_stats()
     
     if len(team_fgs) == 0:
         logger.debug(f"No FG attempts found for {team}")

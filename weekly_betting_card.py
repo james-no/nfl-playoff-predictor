@@ -17,6 +17,24 @@ from utils.playoff_validator import (
 # DIVISIONAL ROUND - JANUARY 2026
 # =============================================================================
 
+def get_weather_forecasts():
+    """
+    Weather forecasts for Divisional Round games.
+    
+    Update these from:
+    - Weather.gov
+    - Weather Underground
+    - Dark Sky API
+    
+    Check 24-48 hours before kickoff for accuracy.
+    """
+    return {
+        "BUF @ DEN": {'temperature': 28, 'wind_speed': 12, 'precipitation': 0},  # Mile High - cold
+        "SF @ SEA": {'temperature': 45, 'wind_speed': 8, 'precipitation': 1},   # Seattle - typical
+        "HOU @ NE": {'temperature': 32, 'wind_speed': 10, 'precipitation': 0},  # Foxboro - cold
+        "LA @ CHI": {'temperature': 35, 'wind_speed': 15, 'precipitation': 0},  # Chicago - windy
+    }
+
 def get_divisional_round_lines():
     """
     Current market lines for Divisional Round (as of 1/15/2026).
@@ -36,6 +54,9 @@ def get_divisional_round_lines():
         "LA @ CHI": 3.0,      # Bears -3
     }
 
+
+# Set your bankroll (used by signal generator)
+BANKROLL = 10000  # $10,000
 
 def generate_weekly_card():
     """Generate betting recommendations for upcoming games."""
@@ -70,21 +91,32 @@ def generate_weekly_card():
     print("Running predictions...\n")
     predictions = []
     
+    # Load weather forecasts
+    weather_forecasts = get_weather_forecasts()
+    
     for game in games:
-        print(f"Analyzing {game['away']} @ {game['home']}...")
+        game_key = f"{game['away']} @ {game['home']}"
+        print(f"Analyzing {game_key}...")
+        
+        # Get weather for this specific game
+        weather = weather_forecasts.get(game_key)
+        if weather is None:
+            print(f"  ⚠️  No weather forecast found for {game_key}, using defaults")
+            weather = {'temperature': 50, 'wind_speed': 5, 'precipitation': 0}
+        else:
+            print(f"  🌤  Weather: {weather['temperature']}°F, Wind: {weather['wind_speed']}mph")
         
         pred = predictor.predict_game(
             home_team=game['home'],
             away_team=game['away'],
-            weather={
-                'temperature': 35,  # Update with actual forecast
-                'wind_speed': 10,
-                'precipitation': 0
-            },
+            weather=weather,
             rest_days={'home': 7, 'away': 7},  # Standard week rest
             is_playoff=True,  # Divisional Round
             save_to_db=False  # Don't clutter DB during testing
         )
+        
+        # Add game date to prediction for CSV export
+        pred['game_date'] = game.get('date', 'TBD')
         
         predictions.append(pred)
     
@@ -96,7 +128,7 @@ def generate_weekly_card():
     print("GENERATING BETTING RECOMMENDATIONS")
     print("="*80 + "\n")
     
-    signal_generator = BettingSignalGenerator(bankroll=10000)
+    signal_generator = BettingSignalGenerator(bankroll=BANKROLL)
     recommendations = signal_generator.generate_weekly_card(
         predictions=predictions,
         market_lines=market_lines,
@@ -119,8 +151,12 @@ def export_to_csv(recommendations):
     
     data = []
     for rec in recommendations:
+        # Extract game date from the recommendation if available
+        game_date = getattr(rec, 'game_date', 'TBD')
+        
         data.append({
-            'date': datetime.now().strftime('%Y-%m-%d'),
+            'analysis_date': datetime.now().strftime('%Y-%m-%d'),
+            'game_date': game_date,
             'game': rec.game,
             'signal': rec.signal.value,
             'recommended_side': rec.recommended_side,
@@ -138,9 +174,6 @@ def export_to_csv(recommendations):
 
 
 if __name__ == "__main__":
-    # Set your bankroll
-    BANKROLL = 10000  # $10,000
-    
     print("""
     ╔══════════════════════════════════════════════════════════════╗
     ║           NFL PLAYOFF BETTING CARD GENERATOR v3.0            ║

@@ -87,13 +87,13 @@ def get_divisional_matchups_2026() -> List[Dict]:
     Get the official Divisional Round matchups for 2026.
     
     Returns:
-        List of matchup dicts with home/away teams
+        List of matchup dicts with home/away teams, date, and time
     """
     return [
-        {"home": "DEN", "away": "BUF", "time": "Saturday 4:30 PM ET"},
-        {"home": "SEA", "away": "SF", "time": "Saturday 8:00 PM ET"},
-        {"home": "NE", "away": "HOU", "time": "Sunday 3:00 PM ET"},
-        {"home": "CHI", "away": "LA", "time": "Sunday 6:30 PM ET"},
+        {"home": "DEN", "away": "BUF", "date": "Jan 18, 2026", "time": "Saturday 4:30 PM ET"},
+        {"home": "SEA", "away": "SF", "date": "Jan 18, 2026", "time": "Saturday 8:00 PM ET"},
+        {"home": "NE", "away": "HOU", "date": "Jan 19, 2026", "time": "Sunday 3:00 PM ET"},
+        {"home": "CHI", "away": "LA", "date": "Jan 19, 2026", "time": "Sunday 6:30 PM ET"},
     ]
 
 

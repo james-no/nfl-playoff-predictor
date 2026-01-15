@@ -30,6 +30,7 @@ class BetSignal(Enum):
 class BettingRecommendation:
     """Single betting recommendation"""
     game: str
+    game_date: str  # Game date (e.g. 'Jan 18, 2026')
     recommended_side: str
     signal: BetSignal
     model_spread: float
@@ -75,7 +76,8 @@ class BettingSignalGenerator:
         model_prediction: Dict,
         market_spread: float,
         market_odds: int = -110,
-        is_playoff: bool = False
+        is_playoff: bool = False,
+        game_date: str = "TBD"
     ) -> BettingRecommendation:
         """
         Generate betting recommendation for a single game.
@@ -88,16 +90,28 @@ class BettingSignalGenerator:
             market_spread: Current market spread (positive = home favored)
             market_odds: American odds (default -110)
             is_playoff: Whether this is a playoff game
+            game_date: Game date string (e.g. 'Jan 18, 2026')
             
         Returns:
             BettingRecommendation object
         """
-        model_spread = model_prediction['predicted_spread']
-        model_prob = model_prediction['win_probability']
+        # Validate required prediction fields
+        model_spread = model_prediction.get('predicted_spread')
+        model_prob = model_prediction.get('win_probability')
+        
+        if model_spread is None or model_prob is None:
+            raise ValueError(
+                f"Invalid prediction for {game}: missing required fields. "
+                f"Got: predicted_spread={model_spread}, win_probability={model_prob}"
+            )
         
         # Calculate edge
         edge_points = abs(model_spread - market_spread)
-        edge_percent = edge_points / abs(market_spread) if market_spread != 0 else 0
+        # Avoid division by zero for pick'em games
+        if abs(market_spread) > 0.01:
+            edge_percent = edge_points / abs(market_spread)
+        else:
+            edge_percent = edge_points * 100  # For pick'em, show absolute edge
         
         # Determine recommended side
         if model_spread > market_spread:
@@ -108,9 +122,10 @@ class BettingSignalGenerator:
             recommended_side = f"{away_team} {-market_spread:+.1f}"
         
         # Generate signal based on edge and confidence
+        model_confidence = model_prediction.get('confidence_level', 'MEDIUM')
         signal = self._determine_signal(
             edge_points=edge_points,
-            model_confidence=model_prediction['confidence_level'],
+            model_confidence=model_confidence,
             market_spread=market_spread,
             is_playoff=is_playoff
         )
@@ -141,6 +156,7 @@ class BettingSignalGenerator:
         
         return BettingRecommendation(
             game=game,
+            game_date=game_date,
             recommended_side=recommended_side,
             signal=signal,
             model_spread=model_spread,
@@ -149,7 +165,7 @@ class BettingSignalGenerator:
             edge_percent=edge_percent,
             kelly_fraction=kelly_fraction,
             suggested_units=suggested_units,
-            confidence=model_prediction['confidence_level'],
+            confidence=model_confidence,
             reasoning=reasoning,
             warnings=warnings
         )
@@ -334,13 +350,17 @@ class BettingSignalGenerator:
                 self.logger.warning(f"No market line found for {game_key}")
                 continue
             
+            # Extract game date from prediction if available
+            game_date = pred.get('game_date', 'TBD')
+            
             rec = self.generate_recommendation(
                 game=game_key,
                 home_team=pred['home_team'],
                 away_team=pred['away_team'],
                 model_prediction=pred,
                 market_spread=market_lines[game_key],
-                is_playoff=is_playoff
+                is_playoff=is_playoff,
+                game_date=game_date
             )
             
             recommendations.append(rec)

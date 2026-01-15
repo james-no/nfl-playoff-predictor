@@ -1,0 +1,975 @@
+2026-01-14 20:46:48,832 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:46:48,835 - database - INFO - Database schema created/verified
+2026-01-14 20:46:48,835 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:46:48,836 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:46:48,836 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:46:48,836 - core.data_loader - INFO - Fetching 2025 NFL data from API...
+2026-01-14 20:46:50,106 - core.data_loader - INFO - Loaded 34429 regular season plays
+2026-01-14 20:46:50,194 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 20:48:16,912 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:48:16,912 - database - INFO - Database schema created/verified
+2026-01-14 20:48:16,912 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:48:16,912 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:48:16,912 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:48:52,225 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:48:52,225 - database - INFO - Database schema created/verified
+2026-01-14 20:48:52,225 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:48:52,225 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:48:52,225 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:48:52,225 - core.data_loader - INFO - Loading from disk cache (age: 0.0h)
+2026-01-14 20:48:52,315 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 20:48:52,332 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:48:52,332 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 20:48:52,332 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 20:48:52,332 - core.predictor - INFO - DEN injuries: +0.000 EPA
+2026-01-14 20:48:52,332 - core.predictor - INFO - BUF injuries: -0.020 EPA
+2026-01-14 20:48:52,332 - core.predictor - INFO - 
+Prediction: DEN by 0.3
+2026-01-14 20:48:52,332 - core.predictor - INFO - Win probability: 51.8%
+2026-01-14 20:48:52,332 - core.predictor - INFO - Confidence: LOW
+2026-01-14 20:48:52,333 - database - INFO - Saved prediction 1: BUF @ DEN
+2026-01-14 20:48:52,334 - core.predictor - INFO - Saved prediction to database (ID: 1)
+2026-01-14 20:48:52,335 - core.predictor - INFO - 
+================================================================================
+PREDICTION: GB @ SF
+================================================================================
+2026-01-14 20:48:52,345 - core.predictor - INFO - SF EPA: +0.024 | GB EPA: +0.082
+2026-01-14 20:48:52,360 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:48:52,360 - core.predictor - INFO - 
+Prediction: SF by 4.1
+2026-01-14 20:48:52,360 - core.predictor - INFO - Win probability: 73.5%
+2026-01-14 20:48:52,360 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 20:48:52,361 - database - INFO - Saved prediction 2: GB @ SF
+2026-01-14 20:48:52,361 - core.predictor - INFO - Saved prediction to database (ID: 2)
+2026-01-14 20:52:20,666 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:52:20,666 - database - INFO - Database schema created/verified
+2026-01-14 20:52:20,666 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:52:20,666 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:52:20,666 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:52:20,666 - core.data_loader - INFO - Loading from disk cache (age: 0.1h)
+2026-01-14 20:52:20,755 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 20:52:20,772 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:52:20,772 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 20:52:20,772 - core.predictor - INFO - Fan noise boost: +0.004 EPA
+2026-01-14 20:52:20,772 - core.predictor - INFO - Travel penalty (away): -0.018 EPA
+2026-01-14 20:52:20,772 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 20:52:20,772 - core.predictor - INFO - DEN injuries: +0.000 EPA
+2026-01-14 20:52:20,772 - core.predictor - INFO - BUF injuries: -0.020 EPA
+2026-01-14 20:52:20,772 - core.predictor - INFO - 
+Prediction: DEN by 0.8
+2026-01-14 20:52:20,772 - core.predictor - INFO - Win probability: 55.2%
+2026-01-14 20:52:20,772 - core.predictor - INFO - Confidence: LOW
+2026-01-14 20:52:20,773 - database - INFO - Saved prediction 3: BUF @ DEN
+2026-01-14 20:52:20,773 - core.predictor - INFO - Saved prediction to database (ID: 3)
+2026-01-14 20:52:20,774 - core.predictor - INFO - 
+================================================================================
+PREDICTION: GB @ SF
+================================================================================
+2026-01-14 20:52:20,785 - core.predictor - INFO - SF EPA: +0.024 | GB EPA: +0.082
+2026-01-14 20:52:20,800 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:52:20,800 - core.predictor - INFO - Fan noise boost: +0.004 EPA
+2026-01-14 20:52:20,800 - core.predictor - INFO - Travel penalty (away): -0.012 EPA
+2026-01-14 20:52:20,800 - core.predictor - INFO - 
+Prediction: SF by 4.5
+2026-01-14 20:52:20,800 - core.predictor - INFO - Win probability: 75.4%
+2026-01-14 20:52:20,800 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 20:52:20,801 - database - INFO - Saved prediction 4: GB @ SF
+2026-01-14 20:52:20,801 - core.predictor - INFO - Saved prediction to database (ID: 4)
+2026-01-14 20:55:08,980 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:55:08,980 - database - INFO - Database schema created/verified
+2026-01-14 20:55:08,980 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:55:08,980 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:55:08,980 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:55:08,980 - core.data_loader - INFO - Loading from disk cache (age: 0.1h)
+2026-01-14 20:55:09,069 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 20:55:09,086 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:09,086 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 20:55:09,086 - core.predictor - INFO - Fan noise boost: +0.004 EPA
+2026-01-14 20:55:09,086 - core.predictor - INFO - Travel penalty (away): -0.018 EPA
+2026-01-14 20:55:09,086 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 20:55:09,086 - core.predictor - INFO - 
+Prediction: DEN by 0.3
+2026-01-14 20:55:09,086 - core.predictor - INFO - Win probability: 52.1%
+2026-01-14 20:55:09,086 - core.predictor - INFO - Confidence: LOW
+2026-01-14 20:55:09,087 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 20:55:09,097 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 20:55:09,112 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:09,112 - core.predictor - INFO - Fan noise boost: +0.007 EPA
+2026-01-14 20:55:32,140 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:55:32,140 - database - INFO - Database schema created/verified
+2026-01-14 20:55:32,140 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:55:32,140 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:55:32,140 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:55:32,140 - core.data_loader - INFO - Loading from disk cache (age: 0.1h)
+2026-01-14 20:55:32,229 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 20:55:32,245 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:32,245 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 20:55:32,245 - core.predictor - INFO - Fan noise boost: +0.004 EPA
+2026-01-14 20:55:32,245 - core.predictor - INFO - Travel penalty (away): -0.018 EPA
+2026-01-14 20:55:32,245 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 20:55:32,245 - core.predictor - INFO - 
+Prediction: DEN by 0.3
+2026-01-14 20:55:32,246 - core.predictor - INFO - Win probability: 52.1%
+2026-01-14 20:55:32,246 - core.predictor - INFO - Confidence: LOW
+2026-01-14 20:55:32,247 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 20:55:32,257 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 20:55:32,272 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:32,272 - core.predictor - INFO - Fan noise boost: +0.007 EPA
+2026-01-14 20:55:52,618 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:55:52,618 - database - INFO - Database schema created/verified
+2026-01-14 20:55:52,618 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:55:52,618 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:55:52,618 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:55:52,618 - core.data_loader - INFO - Loading from disk cache (age: 0.2h)
+2026-01-14 20:55:52,706 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 20:55:52,722 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:52,722 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 20:55:52,722 - core.predictor - INFO - Fan noise boost: +0.004 EPA
+2026-01-14 20:55:52,722 - core.predictor - INFO - Travel penalty (away): -0.018 EPA
+2026-01-14 20:55:52,722 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 20:55:52,722 - core.predictor - INFO - 
+Prediction: DEN by 0.3
+2026-01-14 20:55:52,722 - core.predictor - INFO - Win probability: 52.1%
+2026-01-14 20:55:52,722 - core.predictor - INFO - Confidence: LOW
+2026-01-14 20:55:52,723 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 20:55:52,733 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 20:55:52,748 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:52,748 - core.predictor - INFO - Fan noise boost: +0.007 EPA
+2026-01-14 20:55:52,748 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 20:55:52,748 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 20:55:52,748 - core.predictor - INFO - 
+Prediction: SEA by 3.2
+2026-01-14 20:55:52,749 - core.predictor - INFO - Win probability: 69.0%
+2026-01-14 20:55:52,749 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 20:55:52,750 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 20:55:52,760 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 20:55:52,775 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:52,775 - core.predictor - INFO - Fan noise boost: +0.004 EPA
+2026-01-14 20:55:52,775 - core.predictor - INFO - Travel penalty (away): -0.007 EPA
+2026-01-14 20:55:52,775 - core.predictor - INFO - 
+Prediction: NE by 6.6
+2026-01-14 20:55:52,775 - core.predictor - INFO - Win probability: 84.1%
+2026-01-14 20:55:52,775 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 20:55:52,776 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 20:55:52,786 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 20:55:52,802 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:55:52,802 - core.predictor - INFO - Fan noise boost: +0.004 EPA
+2026-01-14 20:55:52,802 - core.predictor - INFO - Travel penalty (away): -0.012 EPA
+2026-01-14 20:55:52,802 - core.predictor - INFO - 
+Prediction: CHI by 0.3
+2026-01-14 20:55:52,802 - core.predictor - INFO - Win probability: 52.1%
+2026-01-14 20:55:52,802 - core.predictor - INFO - Confidence: LOW
+2026-01-14 20:59:56,190 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 20:59:56,190 - database - INFO - Database schema created/verified
+2026-01-14 20:59:56,190 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 20:59:56,190 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 20:59:56,190 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 20:59:56,191 - core.data_loader - INFO - Loading from disk cache (age: 0.2h)
+2026-01-14 20:59:56,280 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 20:59:56,297 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 20:59:56,297 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 20:59:56,297 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:00:17,703 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:00:17,704 - database - INFO - Database schema created/verified
+2026-01-14 21:00:17,704 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:00:17,704 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:00:17,704 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 21:00:17,704 - core.data_loader - INFO - Loading from disk cache (age: 0.2h)
+2026-01-14 21:00:17,793 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 21:00:17,810 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:00:17,810 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 21:00:17,810 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:00:17,810 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:00:17,810 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:00:17,810 - core.predictor - INFO - DEN injuries: +0.000 EPA (capped)
+2026-01-14 21:00:17,810 - core.predictor - INFO - BUF injuries: -0.020 EPA (capped)
+2026-01-14 21:00:17,810 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.064 EPA
+2026-01-14 21:00:17,810 - core.predictor - INFO - 
+Prediction: BUF by 0.8
+2026-01-14 21:00:17,810 - core.predictor - INFO - Win probability: 45.2%
+2026-01-14 21:00:17,810 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:00:17,811 - database - INFO - Saved prediction 5: BUF @ DEN
+2026-01-14 21:00:17,811 - core.predictor - INFO - Saved prediction to database (ID: 5)
+2026-01-14 21:00:17,812 - core.predictor - INFO - 
+================================================================================
+PREDICTION: GB @ SF
+================================================================================
+2026-01-14 21:00:17,823 - core.predictor - INFO - SF EPA: +0.024 | GB EPA: +0.082
+2026-01-14 21:00:17,838 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:00:17,838 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:00:17,838 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:00:17,838 - core.predictor - INFO - 
+Prediction: SF by 4.5
+2026-01-14 21:00:17,838 - core.predictor - INFO - Win probability: 75.4%
+2026-01-14 21:00:17,838 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:00:17,839 - database - INFO - Saved prediction 6: GB @ SF
+2026-01-14 21:00:17,839 - core.predictor - INFO - Saved prediction to database (ID: 6)
+2026-01-14 21:01:45,030 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:01:45,030 - database - INFO - Database schema created/verified
+2026-01-14 21:01:45,030 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:01:45,030 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:01:45,030 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 21:01:45,030 - core.data_loader - INFO - Loading from disk cache (age: 0.2h)
+2026-01-14 21:01:45,119 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 21:01:45,137 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:01:45,137 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 21:01:45,137 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:01:45,137 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:01:45,137 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:01:45,137 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.044 EPA
+2026-01-14 21:01:45,137 - core.predictor - INFO - 
+Prediction: BUF by 0.8
+2026-01-14 21:01:45,137 - core.predictor - INFO - Win probability: 45.2%
+2026-01-14 21:01:45,137 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:01:45,138 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 21:01:45,148 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 21:01:45,164 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:01:45,164 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:01:45,164 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 21:01:45,164 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:01:45,164 - core.predictor - INFO - 
+Prediction: SEA by 3.2
+2026-01-14 21:01:45,164 - core.predictor - INFO - Win probability: 69.0%
+2026-01-14 21:01:45,164 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:01:45,165 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 21:01:45,175 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 21:01:45,190 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:01:45,190 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:01:45,190 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 21:01:45,191 - core.predictor - INFO - 
+Prediction: NE by 6.6
+2026-01-14 21:01:45,191 - core.predictor - INFO - Win probability: 84.1%
+2026-01-14 21:01:45,191 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:01:45,192 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 21:01:45,201 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 21:01:45,217 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:01:45,217 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:01:45,217 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:01:45,217 - core.predictor - INFO - 
+Prediction: CHI by 0.3
+2026-01-14 21:01:45,217 - core.predictor - INFO - Win probability: 52.1%
+2026-01-14 21:01:45,217 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:07:45,057 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:07:45,058 - database - INFO - Database schema created/verified
+2026-01-14 21:07:45,058 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:07:45,058 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:07:45,058 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CAR
+================================================================================
+2026-01-14 21:07:45,058 - core.data_loader - INFO - Loading from disk cache (age: 0.3h)
+2026-01-14 21:07:45,146 - core.predictor - INFO - CAR EPA: -0.087 | LA EPA: +0.216
+2026-01-14 21:07:45,163 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:07:45,163 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:07:45,163 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:07:45,163 - core.predictor - INFO - 
+Prediction: LA by 4.1
+2026-01-14 21:07:45,163 - core.predictor - INFO - Win probability: 26.6%
+2026-01-14 21:07:45,163 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:07:45,164 - core.predictor - INFO - 
+================================================================================
+PREDICTION: GB @ CHI
+================================================================================
+2026-01-14 21:07:45,174 - core.predictor - INFO - CHI EPA: +0.040 | GB EPA: +0.082
+2026-01-14 21:07:45,190 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:07:45,190 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:07:45,190 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 21:07:45,190 - core.predictor - INFO - 
+Prediction: CHI by 4.1
+2026-01-14 21:07:45,190 - core.predictor - INFO - Win probability: 73.8%
+2026-01-14 21:07:45,190 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:07:45,191 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ JAX
+================================================================================
+2026-01-14 21:07:45,202 - core.predictor - INFO - JAX EPA: +0.117 | BUF EPA: +0.148
+2026-01-14 21:07:45,217 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:07:45,217 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:07:45,217 - core.predictor - INFO - 
+Prediction: JAX by 2.5
+2026-01-14 21:07:45,217 - core.predictor - INFO - Win probability: 65.2%
+2026-01-14 21:07:45,217 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:07:45,218 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ PHI
+================================================================================
+2026-01-14 21:07:45,229 - core.predictor - INFO - PHI EPA: +0.083 | SF EPA: +0.024
+2026-01-14 21:07:45,244 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:07:45,244 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:07:45,244 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:07:45,244 - core.predictor - INFO - 
+Prediction: PHI by 4.3
+2026-01-14 21:07:45,244 - core.predictor - INFO - Win probability: 74.8%
+2026-01-14 21:07:45,244 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:07:45,245 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LAC @ NE
+================================================================================
+2026-01-14 21:07:45,255 - core.predictor - INFO - NE EPA: +0.198 | LAC EPA: +0.061
+2026-01-14 21:07:45,270 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:07:45,270 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:07:45,270 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:07:45,270 - core.predictor - INFO - 
+Prediction: NE by 7.4
+2026-01-14 21:07:45,270 - core.predictor - INFO - Win probability: 86.4%
+2026-01-14 21:07:45,270 - core.predictor - INFO - Confidence: HIGH
+2026-01-14 21:07:45,271 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ PIT
+================================================================================
+2026-01-14 21:07:45,281 - core.predictor - INFO - PIT EPA: +0.005 | HOU EPA: +0.097
+2026-01-14 21:07:45,296 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:07:45,297 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:07:45,297 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 21:07:45,297 - core.predictor - INFO - 
+Prediction: PIT by 0.4
+2026-01-14 21:07:45,297 - core.predictor - INFO - Win probability: 52.4%
+2026-01-14 21:07:45,297 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:11:09,509 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:11:09,509 - database - INFO - Database schema created/verified
+2026-01-14 21:11:09,509 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:11:09,509 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:11:09,510 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ JAX
+================================================================================
+2026-01-14 21:11:09,510 - core.data_loader - INFO - Loading from disk cache (age: 0.4h)
+2026-01-14 21:11:09,601 - core.predictor - INFO - JAX EPA: +0.117 | BUF EPA: +0.148
+2026-01-14 21:11:09,620 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:11:09,620 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:11:09,620 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:11:09,620 - core.predictor - INFO - 
+Prediction: BUF by 2.5
+2026-01-14 21:11:09,620 - core.predictor - INFO - Win probability: 34.8%
+2026-01-14 21:11:09,620 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:11:09,621 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ PIT
+================================================================================
+2026-01-14 21:11:09,632 - core.predictor - INFO - PIT EPA: +0.005 | HOU EPA: +0.097
+2026-01-14 21:11:09,648 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:11:09,649 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:11:09,649 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 21:11:09,649 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:11:09,649 - core.predictor - INFO - 
+Prediction: HOU by 0.4
+2026-01-14 21:11:09,649 - core.predictor - INFO - Win probability: 47.6%
+2026-01-14 21:11:09,649 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:12:38,129 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:12:38,130 - database - INFO - Database schema created/verified
+2026-01-14 21:12:38,130 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:12:38,130 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:12:38,130 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CAR
+================================================================================
+2026-01-14 21:12:38,130 - core.data_loader - INFO - Loading from disk cache (age: 0.4h)
+2026-01-14 21:12:38,223 - core.predictor - INFO - CAR EPA: -0.087 | LA EPA: +0.216
+2026-01-14 21:12:38,240 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,240 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,240 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:12:38,240 - core.predictor - INFO - 
+Prediction: LA by 4.1
+2026-01-14 21:12:38,240 - core.predictor - INFO - Win probability: 26.6%
+2026-01-14 21:12:38,240 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:12:38,241 - core.predictor - INFO - 
+================================================================================
+PREDICTION: GB @ CHI
+================================================================================
+2026-01-14 21:12:38,252 - core.predictor - INFO - CHI EPA: +0.040 | GB EPA: +0.082
+2026-01-14 21:12:38,268 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,268 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,268 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 21:12:38,268 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:12:38,268 - core.predictor - INFO - 
+Prediction: GB by 4.1
+2026-01-14 21:12:38,268 - core.predictor - INFO - Win probability: 26.2%
+2026-01-14 21:12:38,268 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:12:38,269 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ JAX
+================================================================================
+2026-01-14 21:12:38,280 - core.predictor - INFO - JAX EPA: +0.117 | BUF EPA: +0.148
+2026-01-14 21:12:38,297 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,297 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,297 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:12:38,297 - core.predictor - INFO - 
+Prediction: BUF by 2.5
+2026-01-14 21:12:38,297 - core.predictor - INFO - Win probability: 34.8%
+2026-01-14 21:12:38,297 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:12:38,298 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ PHI
+================================================================================
+2026-01-14 21:12:38,309 - core.predictor - INFO - PHI EPA: +0.083 | SF EPA: +0.024
+2026-01-14 21:12:38,326 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,326 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:12:38,326 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:12:38,326 - core.predictor - INFO - 
+Prediction: PHI by 4.3
+2026-01-14 21:12:38,326 - core.predictor - INFO - Win probability: 74.8%
+2026-01-14 21:12:38,326 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:12:38,327 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LAC @ NE
+================================================================================
+2026-01-14 21:12:38,337 - core.predictor - INFO - NE EPA: +0.198 | LAC EPA: +0.061
+2026-01-14 21:12:38,353 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,353 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,353 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:12:38,353 - core.predictor - INFO - 
+Prediction: NE by 7.4
+2026-01-14 21:12:38,353 - core.predictor - INFO - Win probability: 86.4%
+2026-01-14 21:12:38,353 - core.predictor - INFO - Confidence: HIGH
+2026-01-14 21:12:38,354 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ PIT
+================================================================================
+2026-01-14 21:12:38,364 - core.predictor - INFO - PIT EPA: +0.005 | HOU EPA: +0.097
+2026-01-14 21:12:38,380 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,380 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,380 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 21:12:38,380 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:12:38,380 - core.predictor - INFO - 
+Prediction: HOU by 0.4
+2026-01-14 21:12:38,380 - core.predictor - INFO - Win probability: 47.6%
+2026-01-14 21:12:38,380 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:12:38,381 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 21:12:38,392 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 21:12:38,408 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,408 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 21:12:38,408 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,408 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:12:38,408 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:12:38,408 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.044 EPA
+2026-01-14 21:12:38,408 - core.predictor - INFO - 
+Prediction: BUF by 0.8
+2026-01-14 21:12:38,408 - core.predictor - INFO - Win probability: 45.2%
+2026-01-14 21:12:38,408 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:12:38,409 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 21:12:38,419 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 21:12:38,435 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,435 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:12:38,435 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 21:12:38,435 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:12:38,435 - core.predictor - INFO - 
+Prediction: SEA by 3.2
+2026-01-14 21:12:38,435 - core.predictor - INFO - Win probability: 69.0%
+2026-01-14 21:12:38,435 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:12:38,436 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 21:12:38,446 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 21:12:38,461 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,461 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,461 - core.predictor - INFO - Travel penalty (away): -0.011 EPA (raw -0.011)
+2026-01-14 21:12:38,461 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:12:38,461 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.019 EPA
+2026-01-14 21:12:38,461 - core.predictor - INFO - 
+Prediction: NE by 7.1
+2026-01-14 21:12:38,461 - core.predictor - INFO - Win probability: 85.7%
+2026-01-14 21:12:38,461 - core.predictor - INFO - Confidence: HIGH
+2026-01-14 21:12:38,462 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 21:12:38,472 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 21:12:38,488 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:12:38,488 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:12:38,488 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:12:38,488 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:12:38,488 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.026 EPA
+2026-01-14 21:12:38,488 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:12:38,488 - core.predictor - INFO - 
+Prediction: LA by 0.7
+2026-01-14 21:12:38,488 - core.predictor - INFO - Win probability: 45.6%
+2026-01-14 21:12:38,488 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:23:37,041 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:23:37,042 - database - INFO - Database schema created/verified
+2026-01-14 21:23:37,042 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:23:37,042 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:23:37,042 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 21:23:37,042 - core.data_loader - INFO - Loading from disk cache (age: 0.6h)
+2026-01-14 21:23:37,132 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 21:23:37,149 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:23:37,150 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 21:23:37,150 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:23:37,150 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:23:37,150 - core.predictor - INFO - Rest differential: 7 days → +0.035 EPA
+2026-01-14 21:23:37,150 - core.predictor - INFO - DEN injuries: +0.000 EPA (capped)
+2026-01-14 21:23:37,150 - core.predictor - INFO - BUF injuries: -0.020 EPA (capped)
+2026-01-14 21:40:27,299 - core.data_loader - INFO - Loading from disk cache (age: 0.9h)
+2026-01-14 21:40:27,377 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:40:27,378 - database - INFO - Database schema created/verified
+2026-01-14 21:40:27,378 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:40:27,378 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:42:04,955 - core.data_loader - INFO - Loading from disk cache (age: 0.9h)
+2026-01-14 21:42:05,034 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:42:05,034 - database - INFO - Database schema created/verified
+2026-01-14 21:42:05,034 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:42:05,034 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:42:05,034 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ KC
+================================================================================
+2026-01-14 21:42:05,035 - core.data_loader - INFO - Loading from disk cache (age: 0.9h)
+2026-01-14 21:42:05,130 - core.predictor - INFO - KC EPA: +0.050 | HOU EPA: +0.097
+2026-01-14 21:42:05,152 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:42:05,152 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:42:45,921 - core.data_loader - INFO - Loading from disk cache (age: 0.9h)
+2026-01-14 21:42:45,998 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:42:45,998 - database - INFO - Database schema created/verified
+2026-01-14 21:42:45,998 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:42:45,998 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:42:45,998 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ KC
+================================================================================
+2026-01-14 21:42:45,998 - core.data_loader - INFO - Loading from disk cache (age: 0.9h)
+2026-01-14 21:42:46,090 - core.predictor - INFO - KC EPA: +0.050 | HOU EPA: +0.097
+2026-01-14 21:42:46,109 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:42:46,109 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:42:46,130 - core.predictor - INFO - 
+Prediction: HOU by 3.0
+2026-01-14 21:42:46,130 - core.predictor - INFO - Win probability: 32.3%
+2026-01-14 21:42:46,130 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:42:46,131 - core.predictor - INFO - 
+================================================================================
+PREDICTION: WAS @ DET
+================================================================================
+2026-01-14 21:42:46,142 - core.predictor - INFO - DET EPA: +0.061 | WAS EPA: -0.118
+2026-01-14 21:42:46,160 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:42:46,160 - core.predictor - INFO - Fan noise boost: +0.006 EPA (raw +0.006)
+2026-01-14 21:42:46,179 - core.predictor - INFO - 
+Prediction: DET by 2.1
+2026-01-14 21:42:46,179 - core.predictor - INFO - Win probability: 62.9%
+2026-01-14 21:42:46,179 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:42:46,180 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ PHI
+================================================================================
+2026-01-14 21:42:46,190 - core.predictor - INFO - PHI EPA: +0.083 | LA EPA: +0.216
+2026-01-14 21:42:46,205 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:42:46,206 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:42:46,206 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:42:46,223 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:42:46,223 - core.predictor - INFO - 
+Prediction: LA by 1.3
+2026-01-14 21:42:46,223 - core.predictor - INFO - Win probability: 42.1%
+2026-01-14 21:42:46,223 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:42:46,224 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BAL @ BUF
+================================================================================
+2026-01-14 21:42:46,234 - core.predictor - INFO - BUF EPA: +0.148 | BAL EPA: +0.014
+2026-01-14 21:42:46,249 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:42:46,249 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:42:46,265 - core.predictor - INFO - 
+Prediction: BUF by 2.8
+2026-01-14 21:42:46,265 - core.predictor - INFO - Win probability: 66.9%
+2026-01-14 21:42:46,265 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:44:53,303 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:44:53,386 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:44:53,387 - database - INFO - Database schema created/verified
+2026-01-14 21:44:53,387 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:44:53,387 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:44:53,387 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ KC
+================================================================================
+2026-01-14 21:44:53,387 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:44:53,480 - core.predictor - INFO - KC EPA: +0.050 | HOU EPA: +0.097
+2026-01-14 21:44:53,498 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:44:53,498 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:44:53,516 - core.predictor - INFO - 
+Prediction: HOU by 3.0
+2026-01-14 21:44:53,516 - core.predictor - INFO - Win probability: 32.3%
+2026-01-14 21:44:53,516 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:44:53,517 - core.predictor - INFO - 
+================================================================================
+PREDICTION: WAS @ DET
+================================================================================
+2026-01-14 21:44:53,528 - core.predictor - INFO - DET EPA: +0.061 | WAS EPA: -0.118
+2026-01-14 21:44:53,544 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:44:53,544 - core.predictor - INFO - Fan noise boost: +0.006 EPA (raw +0.006)
+2026-01-14 21:44:53,562 - core.predictor - INFO - 
+Prediction: DET by 2.1
+2026-01-14 21:44:53,562 - core.predictor - INFO - Win probability: 62.9%
+2026-01-14 21:44:53,562 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:44:53,563 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ PHI
+================================================================================
+2026-01-14 21:44:53,573 - core.predictor - INFO - PHI EPA: +0.083 | LA EPA: +0.216
+2026-01-14 21:44:53,588 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:44:53,588 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:44:53,588 - core.predictor - INFO - Travel penalty (away): -0.018 EPA (raw -0.018)
+2026-01-14 21:44:53,606 - core.predictor - INFO - Anchor no-flip rule enforced based on full-season EPA edge
+2026-01-14 21:44:53,609 - core.predictor - INFO - 
+Prediction: LA by 1.3
+2026-01-14 21:44:53,609 - core.predictor - INFO - Win probability: 42.1%
+2026-01-14 21:44:53,609 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:44:53,609 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BAL @ BUF
+================================================================================
+2026-01-14 21:44:53,619 - core.predictor - INFO - BUF EPA: +0.148 | BAL EPA: +0.014
+2026-01-14 21:44:53,637 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:44:53,637 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:44:53,654 - core.predictor - INFO - 
+Prediction: BUF by 2.8
+2026-01-14 21:44:53,654 - core.predictor - INFO - Win probability: 66.9%
+2026-01-14 21:44:53,654 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:46:28,104 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:46:28,181 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:46:28,181 - database - INFO - Database schema created/verified
+2026-01-14 21:46:28,181 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:46:28,181 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:46:28,182 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 21:46:28,182 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:46:28,269 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 21:46:28,285 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:46:28,285 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 21:46:28,285 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:46:28,285 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:46:28,304 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.012 EPA
+2026-01-14 21:46:28,304 - core.predictor - INFO - 
+Prediction: BUF by 0.5
+2026-01-14 21:46:28,304 - core.predictor - INFO - Win probability: 46.8%
+2026-01-14 21:46:28,304 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:46:28,305 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 21:46:28,315 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 21:46:28,331 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:46:28,331 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:46:28,331 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 21:46:28,349 - core.predictor - INFO - 
+Prediction: SEA by 3.5
+2026-01-14 21:46:28,349 - core.predictor - INFO - Win probability: 70.7%
+2026-01-14 21:46:28,349 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:46:28,350 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 21:46:28,359 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 21:46:28,374 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:46:28,374 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:46:28,374 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 21:46:28,391 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.010 EPA
+2026-01-14 21:46:28,391 - core.predictor - INFO - 
+Prediction: NE by 6.4
+2026-01-14 21:46:28,391 - core.predictor - INFO - Win probability: 83.1%
+2026-01-14 21:46:28,391 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:46:28,392 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 21:46:28,402 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 21:46:28,418 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:46:28,418 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:46:28,418 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:46:28,435 - core.predictor - INFO - 
+Prediction: LA by 0.4
+2026-01-14 21:46:28,435 - core.predictor - INFO - Win probability: 47.8%
+2026-01-14 21:46:28,435 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:47:46,179 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:47:46,255 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:47:46,256 - database - INFO - Database schema created/verified
+2026-01-14 21:47:46,256 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:47:46,256 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:47:46,256 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 21:47:46,256 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:47:46,349 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 21:47:46,368 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:47:46,368 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 21:47:46,368 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:47:46,368 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:47:46,388 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.012 EPA
+2026-01-14 21:47:46,388 - core.predictor - INFO - 
+Prediction: BUF by 0.5
+2026-01-14 21:47:46,388 - core.predictor - INFO - Win probability: 46.8%
+2026-01-14 21:47:46,388 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:47:46,389 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 21:47:46,399 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 21:47:46,416 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:47:46,416 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:47:46,416 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 21:47:46,436 - core.predictor - INFO - 
+Prediction: SEA by 3.5
+2026-01-14 21:47:46,436 - core.predictor - INFO - Win probability: 70.7%
+2026-01-14 21:47:46,436 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:47:46,437 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 21:47:46,448 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 21:47:46,464 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:47:46,464 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:47:46,464 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 21:47:46,482 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.010 EPA
+2026-01-14 21:47:46,482 - core.predictor - INFO - 
+Prediction: NE by 6.4
+2026-01-14 21:47:46,482 - core.predictor - INFO - Win probability: 83.1%
+2026-01-14 21:47:46,482 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:47:46,483 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 21:47:46,493 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 21:47:46,508 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:47:46,508 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:47:46,508 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:47:46,525 - core.predictor - INFO - 
+Prediction: LA by 0.4
+2026-01-14 21:47:46,525 - core.predictor - INFO - Win probability: 47.8%
+2026-01-14 21:47:46,525 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:48:25,753 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:48:25,832 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 21:48:25,832 - database - INFO - Database schema created/verified
+2026-01-14 21:48:25,832 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 21:48:25,832 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 21:48:25,832 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 21:48:25,832 - core.data_loader - INFO - Loading from disk cache (age: 1.0h)
+2026-01-14 21:48:25,922 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 21:48:25,941 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:48:25,942 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 21:48:25,942 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:48:25,942 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:48:25,961 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.012 EPA
+2026-01-14 21:48:25,961 - core.predictor - INFO - 
+Prediction: BUF by 0.5
+2026-01-14 21:48:25,961 - core.predictor - INFO - Win probability: 46.8%
+2026-01-14 21:48:25,961 - core.predictor - INFO - Confidence: LOW
+2026-01-14 21:48:25,962 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 21:48:25,973 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 21:48:25,990 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:48:25,990 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 21:48:25,990 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 21:48:26,010 - core.predictor - INFO - 
+Prediction: SEA by 3.5
+2026-01-14 21:48:26,010 - core.predictor - INFO - Win probability: 70.7%
+2026-01-14 21:48:26,010 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:48:26,011 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 21:48:26,021 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 21:48:26,037 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:48:26,038 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:48:26,038 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 21:48:26,056 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.010 EPA
+2026-01-14 21:48:26,056 - core.predictor - INFO - 
+Prediction: NE by 6.4
+2026-01-14 21:48:26,056 - core.predictor - INFO - Win probability: 83.1%
+2026-01-14 21:48:26,056 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 21:48:26,057 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 21:48:26,069 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 21:48:26,084 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 21:48:26,084 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 21:48:26,084 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 21:48:26,102 - core.predictor - INFO - 
+Prediction: LA by 0.4
+2026-01-14 21:48:26,102 - core.predictor - INFO - Win probability: 47.8%
+2026-01-14 21:48:26,102 - core.predictor - INFO - Confidence: LOW
+2026-01-14 22:05:38,526 - core.data_loader - INFO - Loading from disk cache (age: 1.3h)
+2026-01-14 22:05:38,607 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 22:05:38,607 - database - INFO - Database schema created/verified
+2026-01-14 22:05:38,607 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 22:05:38,607 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 22:05:38,607 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 22:05:38,607 - core.data_loader - INFO - Loading from disk cache (age: 1.3h)
+2026-01-14 22:05:38,699 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 22:05:38,716 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:38,716 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 22:05:38,716 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 22:05:38,717 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 22:05:38,717 - core.predictor - INFO - Weather impact: -0.010 EPA (split)
+2026-01-14 22:05:38,736 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.012 EPA
+2026-01-14 22:05:38,736 - core.predictor - INFO - 
+Prediction: BUF by 0.5
+2026-01-14 22:05:38,736 - core.predictor - INFO - Win probability: 46.8%
+2026-01-14 22:05:38,736 - core.predictor - INFO - Confidence: LOW
+2026-01-14 22:05:38,737 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 22:05:38,747 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 22:05:38,763 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:38,763 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 22:05:38,763 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 22:05:38,763 - core.predictor - INFO - Weather impact: -0.010 EPA (split)
+2026-01-14 22:05:38,780 - core.predictor - INFO - 
+Prediction: SEA by 3.5
+2026-01-14 22:05:38,780 - core.predictor - INFO - Win probability: 70.7%
+2026-01-14 22:05:38,781 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 22:05:38,781 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 22:05:38,792 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 22:05:38,807 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:38,807 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 22:05:38,807 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 22:05:38,824 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.010 EPA
+2026-01-14 22:05:38,824 - core.predictor - INFO - 
+Prediction: NE by 6.4
+2026-01-14 22:05:38,824 - core.predictor - INFO - Win probability: 83.1%
+2026-01-14 22:05:38,824 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 22:05:38,825 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 22:05:38,835 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 22:05:38,850 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:38,850 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 22:05:38,850 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 22:05:38,867 - core.predictor - INFO - 
+Prediction: LA by 0.4
+2026-01-14 22:05:38,867 - core.predictor - INFO - Win probability: 47.8%
+2026-01-14 22:05:38,867 - core.predictor - INFO - Confidence: LOW
+2026-01-14 22:05:54,310 - core.data_loader - INFO - Loading from disk cache (age: 1.3h)
+2026-01-14 22:05:54,393 - core.data_loader - INFO - Auto-detected: 2025 NFL Season (Playoffs)
+2026-01-14 22:05:54,393 - database - INFO - Database schema created/verified
+2026-01-14 22:05:54,393 - database - INFO - Database initialized at nfl_predictions.db
+2026-01-14 22:05:54,393 - core.predictor - INFO - NFL Predictor initialized for 2025 season
+2026-01-14 22:05:54,393 - core.predictor - INFO - 
+================================================================================
+PREDICTION: BUF @ DEN
+================================================================================
+2026-01-14 22:05:54,393 - core.data_loader - INFO - Loading from disk cache (age: 1.3h)
+2026-01-14 22:05:54,485 - core.predictor - INFO - DEN EPA: +0.097 | BUF EPA: +0.148
+2026-01-14 22:05:54,502 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:54,502 - core.predictor - INFO - Altitude advantage: +0.018 EPA
+2026-01-14 22:05:54,502 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 22:05:54,502 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 22:05:54,502 - core.predictor - INFO - Weather impact: -0.010 EPA (split)
+2026-01-14 22:05:54,521 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.012 EPA
+2026-01-14 22:05:54,521 - core.predictor - INFO - 
+Prediction: BUF by 0.5
+2026-01-14 22:05:54,521 - core.predictor - INFO - Win probability: 46.8%
+2026-01-14 22:05:54,521 - core.predictor - INFO - Confidence: LOW
+2026-01-14 22:05:54,522 - core.predictor - INFO - 
+================================================================================
+PREDICTION: SF @ SEA
+================================================================================
+2026-01-14 22:05:54,533 - core.predictor - INFO - SEA EPA: +0.151 | SF EPA: +0.024
+2026-01-14 22:05:54,548 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:54,548 - core.predictor - INFO - Fan noise boost: +0.007 EPA (raw +0.007)
+2026-01-14 22:05:54,548 - core.predictor - INFO - Division rivalry: 18% compression
+2026-01-14 22:05:54,548 - core.predictor - INFO - Weather impact: -0.010 EPA (split)
+2026-01-14 22:05:54,566 - core.predictor - INFO - 
+Prediction: SEA by 3.5
+2026-01-14 22:05:54,566 - core.predictor - INFO - Win probability: 70.7%
+2026-01-14 22:05:54,566 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 22:05:54,567 - core.predictor - INFO - 
+================================================================================
+PREDICTION: HOU @ NE
+================================================================================
+2026-01-14 22:05:54,576 - core.predictor - INFO - NE EPA: +0.198 | HOU EPA: +0.097
+2026-01-14 22:05:54,591 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:54,591 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 22:05:54,591 - core.predictor - INFO - Travel penalty (away): -0.007 EPA (raw -0.007)
+2026-01-14 22:05:54,608 - core.predictor - INFO - Global non-EPA cap applied: adjusted by +0.010 EPA
+2026-01-14 22:05:54,608 - core.predictor - INFO - 
+Prediction: NE by 6.4
+2026-01-14 22:05:54,608 - core.predictor - INFO - Win probability: 83.1%
+2026-01-14 22:05:54,609 - core.predictor - INFO - Confidence: MEDIUM
+2026-01-14 22:05:54,609 - core.predictor - INFO - 
+================================================================================
+PREDICTION: LA @ CHI
+================================================================================
+2026-01-14 22:05:54,620 - core.predictor - INFO - CHI EPA: +0.040 | LA EPA: +0.216
+2026-01-14 22:05:54,638 - core.predictor - INFO - Home field advantage: +0.029 EPA
+2026-01-14 22:05:54,638 - core.predictor - INFO - Fan noise boost: +0.004 EPA (raw +0.004)
+2026-01-14 22:05:54,638 - core.predictor - INFO - Travel penalty (away): -0.012 EPA (raw -0.012)
+2026-01-14 22:05:54,658 - core.predictor - INFO - 
+Prediction: LA by 0.4
+2026-01-14 22:05:54,658 - core.predictor - INFO - Win probability: 47.8%
+2026-01-14 22:05:54,658 - core.predictor - INFO - Confidence: LOW
