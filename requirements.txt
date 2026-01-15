@@ -1,5 +1,17 @@
-openai>=1.0.0
-python-dotenv>=1.0.0
+# Core NFL data and analysis
 nflreadpy>=0.1.0
+polars>=0.19.0
 pyarrow>=10.0.0
 pandas>=2.0.0
+numpy>=1.24.0
+
+# Optional: OpenAI for enhanced analysis
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Optional: Streamlit for UI (can add later)
+# streamlit>=1.28.0
+
+# Optional: Testing
+# pytest>=7.4.0
+# pytest-cov>=4.1.0

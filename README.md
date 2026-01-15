@@ -1,6 +1,16 @@
-# NFL Playoff Predictor v2.0 🏆
+# NFL Playoff Predictor v3.0 🏈
 
-**Professional-grade** NFL playoff betting system using advanced EPA metrics, situational stats, injury tracking, and sharp money indicators. Built for serious analysis with **83.3% ATS accuracy** on 2025 Wild Card Weekend backtesting.
+**Professional-grade** NFL playoff betting system with object-oriented architecture, database tracking, and comprehensive betting intelligence. Built for serious analysis with **83.3% ATS accuracy** (5-1 record) on 2025 Wild Card Weekend backtesting.
+
+## 🆕 What's New in v3.0
+
+- ✅ **Object-Oriented Architecture**: Clean, maintainable OOP design
+- ✅ **Database Tracking**: SQLite persistence for predictions, CLV, and performance
+- ✅ **Configuration Management**: Centralized settings in `config.py`
+- ✅ **Professional Logging**: Rotating file logs with structured output
+- ✅ **Error Handling**: Graceful fallbacks and caching
+- ✅ **Complete Documentation**: Docstrings, architecture docs, examples
+- 🔜 **Streamlit UI**: Coming soon (1-hour implementation)
 
 ## 🎯 Features (v2.0 - Complete System)
 
@@ -79,33 +89,59 @@ Traditional stats like total yards and points can be misleading:
 
 ## Usage
 
-### Complete Professional System (v2.0)
+### v3.0 Quick Start (Recommended)
 
 ```bash
-python3 complete_system.py
+# Run example predictions with v3.0 architecture
+python3 example_v3.py
 ```
 
-This runs the full professional system with:
+This demonstrates:
 1. Automatic season detection (2025 NFL Season - Playoffs)
-2. Backtesting on Wild Card Weekend (83.3% ATS accuracy)
-3. Rest differential analysis (bye week advantages)
-4. Live betting scenario planning
-5. CLV tracking framework
+2. Complete EPA + betting analysis
+3. Injury, weather, and rest differential tracking
+4. Kelly Criterion bet sizing
+5. Database persistence
+6. Performance metrics
 
-### Advanced Analysis Tools
+### Programmatic Usage
+
+```python
+from core.predictor import NFLPredictor
+
+# Initialize predictor
+predictor = NFLPredictor()
+
+# Make a prediction
+prediction = predictor.predict_game(
+    home_team='DEN',
+    away_team='BUF',
+    injuries={'DEN': 0.0, 'BUF': -0.02},
+    weather={'temperature': 35, 'wind_speed': 12},
+    rest_days={'home': 13, 'away': 6},
+    bankroll=10000
+)
+
+# Display formatted output
+print(predictor.format_prediction_output(prediction))
+
+# Or access raw data
+print(f"Winner: {prediction['predicted_winner']}")
+print(f"Spread: {prediction['predicted_spread']:.1f}")
+print(f"Kelly Bet: ${prediction['betting_recommendation']['fractional_kelly_amount']:.2f}")
+```
+
+### Legacy v2.0 Systems (Still Available)
 
 ```bash
-# Professional predictor with all betting intelligence
+# Complete system with backtesting
+python3 complete_system.py
+
+# Professional betting system
 python3 ultimate_pro_system.py
 
 # Injury and context analyzer
 python3 injury_context_analyzer.py
-
-# Improved predictor with enhanced accuracy
-python3 improved_predictor.py
-
-# Basic predictor (original)
-python3 nfl_predictor.py
 ```
 
 ### Example Session
