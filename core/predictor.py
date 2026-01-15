@@ -9,8 +9,9 @@ import numpy as np
 from .data_loader import NFLDataLoader
 from .epa_analyzer import EPAAnalyzer
 from .betting_analyzer import BettingAnalyzer
+from .matchup_features import aggregate_advanced
 from database import PredictionsDB
-from config import BettingConfig, InjuryConfig, TeamsConfig, EPAConfig, TravelConfig
+from config import BettingConfig, InjuryConfig, TeamsConfig, EPAConfig, TravelConfig, CalibrationConfig, AdvancedWeights
 from utils.validators import validate_team, are_division_rivals
 from utils.travel import compute_travel_penalty, compute_fan_noise_boost
 from logger import get_logger
@@ -40,6 +41,7 @@ class NFLPredictor:
                      injuries: Optional[Dict] = None,
                      weather: Optional[Dict] = None,
                      rest_days: Optional[Dict] = None,
+                     is_playoff: bool = False,
                      odds: int = -110,
                      bankroll: float = 10000,
                      save_to_db: bool = True) -> Dict:
@@ -94,9 +96,15 @@ class NFLPredictor:
         home_situational = self.epa_analyzer.calculate_situational_stats(home_off, home_def)
         away_situational = self.epa_analyzer.calculate_situational_stats(away_off, away_def)
         
-        # Start with combined EPA
-        home_total_epa = home_combined['combined_total_epa']
-        away_total_epa = away_combined['combined_total_epa']
+        # Start with combined EPA (apply shrinkage toward full season if enabled)
+        home_comb_total = home_combined['combined_total_epa']
+        away_comb_total = away_combined['combined_total_epa']
+        if CalibrationConfig.SHRINK_RECENT_TO_SEASON:
+            alpha = CalibrationConfig.RECENT_SHRINK_ALPHA
+            home_comb_total = (1 - alpha) * home_comb_total + alpha * home_epa['total_epa']
+            away_comb_total = (1 - alpha) * away_comb_total + alpha * away_epa['total_epa']
+        home_total_epa = home_comb_total
+        away_total_epa = away_comb_total
         
         # Base EPA differential (for EPA-dominant clamp)
         base_epa_diff = home_total_epa - away_total_epa
@@ -207,6 +215,42 @@ class NFLPredictor:
                 adjustments['weather'] = weather_impact
                 logger.info(f"Weather impact: {weather_impact:+.3f} EPA (split)")
         
+        # Advanced matchup/context deltas (tiny, bounded)
+        adv = aggregate_advanced(home_team, away_team,
+                                 home_off, home_def, away_off, away_def,
+                                 pbp[(pbp['posteam']==home_team)|(pbp['defteam']==home_team)],
+                                 pbp[(pbp['posteam']==away_team)|(pbp['defteam']==away_team)],
+                                 weather)
+        if AdvancedWeights.ENABLED:
+            home_total_epa += adv['home']
+            away_total_epa += adv['away']
+            adjustments['advanced_matchups'] = adv
+        
+        # Kicker differential
+        kicker_impact = 0.0
+        kicker_breakdown = {}
+        try:
+            from core.kicker_analytics import calculate_kicker_stats, calculate_kicker_advantage
+            
+            home_kicker_stats = calculate_kicker_stats(pbp, home_team)
+            away_kicker_stats = calculate_kicker_stats(pbp, away_team)
+            
+            kicker_epa, kicker_breakdown = calculate_kicker_advantage(
+                home_kicker_stats,
+                away_kicker_stats,
+                weather=weather,
+                is_playoff=is_playoff
+            )
+            
+            home_total_epa += kicker_epa
+            kicker_impact = kicker_epa
+            adjustments['kicker'] = kicker_epa
+            
+            if abs(kicker_epa) > 0.005:
+                logger.info(f"Kicker advantage: {kicker_epa:+.3f} EPA ({home_team if kicker_epa > 0 else away_team})")
+        except Exception as e:
+            logger.debug(f"Kicker analysis skipped: {e}")
+
         # Calculate final EPA differential
         raw_epa_differential = home_total_epa - away_total_epa
 
@@ -235,13 +279,11 @@ class NFLPredictor:
         else:
             epa_differential = raw_epa_differential
         
-        # Convert EPA to point spread
-        # Rule of thumb: 0.10 EPA ≈ 2.5 points
-        predicted_spread = epa_differential / 0.04  # More aggressive conversion
+        # Convert EPA to point spread using calibrated scale
+        predicted_spread = epa_differential / CalibrationConfig.EPA_TO_POINTS
         
-        # Convert spread to win probability
-        # Using logistic regression: P(win) = 1 / (1 + exp(-0.25 * spread))
-        win_probability = 1 / (1 + np.exp(-0.25 * predicted_spread))
+        # Convert spread to win probability using calibrated logistic
+        win_probability = 1 / (1 + np.exp(-(CalibrationConfig.LOGIT_SLOPE * predicted_spread + CalibrationConfig.LOGIT_INTERCEPT)))
         
         # Determine winner
         if predicted_spread > 0:
@@ -281,6 +323,8 @@ class NFLPredictor:
             'adjustments': adjustments,
             'injury_impact': injury_impact,
             'weather_impact': weather_impact,
+            'kicker_impact': kicker_impact,
+            'kicker_breakdown': kicker_breakdown,
             
             # Situational stats
             'home_situational': home_situational,

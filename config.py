@@ -172,6 +172,7 @@ class InjuryConfig:
     RB = 0.010  # Most replaceable
     CB1 = 0.018
     SAFETY = 0.012
+    KICKER = 0.008  # Elite vs average kicker
     
     # Status multipliers
     OUT_MULTIPLIER = 1.0
@@ -179,6 +180,57 @@ class InjuryConfig:
     QUESTIONABLE_MULTIPLIER = 0.5
     PROBABLE_MULTIPLIER = 0.2
     PLAYING_HURT_MULTIPLIER = 0.3
+
+# =============================================================================
+# KICKER SETTINGS
+# =============================================================================
+
+class KickerConfig:
+    """Kicker performance modeling configuration"""
+    
+    # Enable kicker differential modeling
+    ENABLED = True
+    
+    # Distance ranges for FG evaluation (yards)
+    DISTANCE_RANGES = {
+        'short': (0, 39),      # XP and chip shots
+        'medium': (40, 49),    # Standard range
+        'long': (50, 59),      # Long range
+        'very_long': (60, 70)  # Rare attempts
+    }
+    
+    # League average FG% by distance (2020-2025 data)
+    LEAGUE_AVG_FG_PCT = {
+        'short': 0.94,
+        'medium': 0.82,
+        'long': 0.65,
+        'very_long': 0.35
+    }
+    
+    # Weather impact multipliers (reduce FG% by these amounts)
+    WEATHER_PENALTY = {
+        'wind_high': 0.08,      # >15 mph wind
+        'wind_extreme': 0.15,   # >25 mph wind
+        'cold': 0.05,           # <32°F
+        'extreme_cold': 0.10,   # <20°F
+        'precipitation': 0.04,  # Rain/snow
+    }
+    
+    # Pressure situation bonus/penalty
+    CLUTCH_BONUS = 0.03   # Elite kickers in 4Q/OT close games
+    CLUTCH_PENALTY = 0.05  # Below-average kickers in pressure
+    
+    # Expected FG attempts per game (for close game modeling)
+    AVG_FG_ATTEMPTS_PER_GAME = 2.0
+    CLOSE_GAME_FG_WEIGHT = 1.5  # Multiply by this in games decided by <=7
+    
+    # EPA impact per percentage point of FG% difference
+    # Elite vs average kicker ~10% difference on 40+ yarders
+    # ~2 FG attempts per game × 3 points × 10% = 0.6 points = 0.024 EPA
+    EPA_PER_FG_PCT_POINT = 0.0024
+    
+    # Maximum kicker differential impact (cap)
+    MAX_KICKER_EPA_DIFF = 0.015  # ~0.375 points max advantage
 
 # =============================================================================
 # REFEREE CREW SETTINGS
@@ -277,6 +329,52 @@ class ValidationConfig:
     CONFIDENCE_THRESHOLD_LOW = 0.55  # <55% = low confidence
 
 # =============================================================================
+# CALIBRATION & ADVANCED SETTINGS
+# =============================================================================
+
+class CalibrationConfig:
+    """Calibration and shrinkage for EPA→spread/probability."""
+    # Logistic mapping for spread→win prob
+    LOGIT_SLOPE = 0.25
+    LOGIT_INTERCEPT = 0.0
+    
+    # EPA→spread scale (points per EPA)
+    EPA_TO_POINTS = 0.04  # 0.04 EPA ≈ 1 point
+    
+    # Bayesian shrinkage for recent form
+    SHRINK_RECENT_TO_SEASON = True
+    RECENT_SHRINK_ALPHA = 0.25  # shrink 25% toward full season
+
+class AdvancedWeights:
+    """Weights and caps for advanced matchup/context features."""
+    ENABLED = True
+    
+    # Per-factor max absolute EPA impact (small and bounded)
+    MAX_EPA_OL_DL = 0.020
+    MAX_EPA_COVERAGE_FIT = 0.015
+    MAX_EPA_PACE = 0.015
+    MAX_EPA_SPECIAL_TEAMS = 0.010
+    MAX_EPA_MOMENTUM = 0.020  # "hot hand" momentum cap per team
+    MOMENTUM_WINDOW = 5       # last N games window
+    MOMENTUM_SLOPE_SCALE = 0.50  # scales slope to EPA units
+    MOMENTUM_RECENT_VS_SEASON_SCALE = 0.50  # scales (recent - season)
+    
+    # Total cap across advanced adjustments
+    MAX_EPA_TOTAL = 0.040
+    
+    # Global toggle to keep these subservient to EPA-dominant cap
+    RESPECT_EPA_DOMINANT = True
+
+class MarketConfig:
+    """Market-aware betting risk controls (does not change winner pick)."""
+    # Require larger fair edge when betting through key numbers
+    MIN_EDGE_THROUGH_3 = 0.8  # points
+    MIN_EDGE_THROUGH_7 = 1.1  # points
+    
+    # Reduce Kelly fraction when near key numbers
+    REDUCE_KELLY_NEAR_KEY = 0.5  # 50%
+
+# =============================================================================
 # TEAM ABBREVIATIONS
 # =============================================================================
 
@@ -351,8 +449,11 @@ CONFIG = {
     'logging': LoggingConfig,
     'api': APIConfig,
     'ui': UIConfig,
-    'validation': ValidationConfig,
-    'teams': TeamsConfig,
+        'validation': ValidationConfig,
+        'teams': TeamsConfig,
+        'calibration': CalibrationConfig,
+        'advanced': AdvancedWeights,
+        'market': MarketConfig,
 }
 
 def get_config(category: str):
