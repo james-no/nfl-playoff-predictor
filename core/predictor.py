@@ -72,9 +72,10 @@ class NFLPredictor:
         home_off, home_def = self.data_loader.get_team_plays(home_team, pbp)
         away_off, away_def = self.data_loader.get_team_plays(away_team, pbp)
         
-        # Calculate base EPA
+        # Calculate base EPA (full-season)
         home_epa = self.epa_analyzer.calculate_team_epa(home_off, home_def)
         away_epa = self.epa_analyzer.calculate_team_epa(away_off, away_def)
+        base_full_season_diff = home_epa['total_epa'] - away_epa['total_epa']
         
         logger.info(f"{home_team} EPA: {home_epa['total_epa']:+.3f} | {away_team} EPA: {away_epa['total_epa']:+.3f}")
         
@@ -221,6 +222,16 @@ class NFLPredictor:
             else:
                 epa_differential = raw_epa_differential
                 adjustments['global_non_epa_cap_applied'] = 0.0
+            
+            # No-flip anchor based on full-season EPA edge
+            anchor = base_full_season_diff if EPAConfig.ANCHOR_TO_FULL_SEASON else base_epa_diff
+            if abs(anchor) >= EPAConfig.NON_EPA_NO_FLIP_THRESHOLD:
+                if (epa_differential > 0) != (anchor > 0):
+                    # Keep side consistent with anchor; set minimal epsilon to preserve sign
+                    sign = 1 if anchor > 0 else -1
+                    epa_differential = sign * max(1e-6, abs(epa_differential))
+                    adjustments['anchor_no_flip_enforced'] = float(anchor)
+                    logger.info("Anchor no-flip rule enforced based on full-season EPA edge")
         else:
             epa_differential = raw_epa_differential
         

@@ -64,6 +64,10 @@ class EPAConfig:
     CAP_INJURY_PER_TEAM_EPA = 0.030  # Generic per-team injury cap (QB-specific TBD)
     CAP_FAN_NOISE_EPA = 0.009
     CAP_WEATHER_EPA = 0.030
+
+    # Anchoring: do not allow non-EPA factors to FLIP the side when full-season EPA edge is meaningful
+    ANCHOR_TO_FULL_SEASON = True
+    NON_EPA_NO_FLIP_THRESHOLD = 0.030  # ~0.75 points worth of EPA edge
     
     # EPA thresholds
     ELITE_OFFENSE_THRESHOLD = 0.15
